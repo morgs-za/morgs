@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: powershell
+  steps:
+    - name: mypwshscript
+      image: mcr.microsoft.com/powershell:latest
+      script: |
+        #!/usr/bin/env pwsh
+        1+1
